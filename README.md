@@ -145,7 +145,7 @@ The script follows a single end-to-end flow:
 5. Estimate the base-pay difference to market median and group it into four review phases.
 6. Save one four-panel chart for each analysis.
 
-The code is kept in [`pay_equity_analysis.py`](pay_equity_analysis.py). A single `PayEquityAnalysis` class groups the data and analysis steps; you can run the project without needing to understand object-oriented programming.
+The analysis code is kept in [`pay_equity_analysis.py`](pay_equity_analysis.py). The small [`run_analysis.py`](run_analysis.py) file starts the analysis using the CSV in `data/raw/`. A single `PayEquityAnalysis` class groups the data and analysis steps; you can run the project without needing to understand object-oriented programming.
 
 ## Run the project
 
@@ -182,13 +182,13 @@ Place a permitted-to-use CSV at:
 data/raw/BananaByte_Employee_Salary_090923 CleanedData_On_Python.csv
 ```
 
-Then run:
+Then run the simple launcher:
 
 ```bash
-python pay_equity_analysis.py
+python run_analysis.py
 ```
 
-The script prints five headline metrics and saves the charts in `reports/`. The supplied employee CSV is kept local and ignored by Git because it may contain sensitive compensation data.
+The launcher prints five headline metrics and saves the charts in `reports/`. You can also run `python pay_equity_analysis.py` directly. The supplied employee CSV is kept local and ignored by Git because it may contain sensitive compensation data.
 
 ## Input data
 
@@ -215,6 +215,7 @@ The dataset also contains fields such as experience, seniority, education, and l
 ```text
 .
 ├── pay_equity_analysis.py
+├── run_analysis.py
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
