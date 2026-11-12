@@ -10,7 +10,7 @@ data/raw/*.csv
 
 # Local drafts and files not needed in the public project.
 PROJECT_DOCUMENTATION.md
-medium_substack_article.md
 Prompt and Feedback from Claude.docx
 test.py
 BananaByte_PayEquity.code-workspace
+medium_substack_article.md
